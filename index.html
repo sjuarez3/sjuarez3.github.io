@@ -1,32 +1,31 @@
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-				<script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-				<script type = "text/javascript" src = "index.js"></script>
-			</head>
+		<script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+	</head>
 
-			<body>
+	<body>
 
+		<script type = "text/javascript" src = "index.js"></script>
+		<select id="subjectSelect" onchange="listCourses()">
+			<option selected disabled hidden>Subject</option>
+		</select>
 
-				<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
-				<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-auth.js"></script>
-				<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+		<ul id="courselist">
+		</ul>
 
-				<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
-				<script>
-					// Initialize Firebase
-					var config = {
-					apiKey: "AIzaSyAZ-aNUIlX__fhXIflOXQkZ8RBzuo5PMxQ",
-					authDomain: "program-planning-tool.firebaseapp.com",
-					databaseURL: "https://program-planning-tool.firebaseio.com",
-					storageBucket: "program-planning-tool.appspot.com",
-					messagingSenderId: "750984983725"
-					};
-					firebase.initializeApp(config);
-				</script>
-				
-			</body>
-		</html>
+		<script>
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyAZ-aNUIlX__fhXIflOXQkZ8RBzuo5PMxQ",
+			authDomain: "program-planning-tool.firebaseapp.com",
+			databaseURL: "https://program-planning-tool.firebaseio.com",
+			storageBucket: "program-planning-tool.appspot.com",
+			messagingSenderId: "750984983725"
+			};
+			firebase.initializeApp(config);
+		</script>
+	</body>
+</html>
