@@ -59,15 +59,13 @@ function listCourses() {
 
 			var innerHtml = li[i].innerHTML;
 			
-			console.log(innerHtml);
-			console.log(courseCode);
 			if(innerHtml != courseCode)
 			{
 				li[i].style.display = "none";
 			}
 			else
 			{
-				li[i].style.display;
+				li[i].style.display = "unset";
 			}
 			i++;
 		});
