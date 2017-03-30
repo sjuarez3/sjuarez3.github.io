@@ -5,7 +5,8 @@ border-style:solid;
 border-color:#8FAADC;
 border-width:2px;
 background:none;
-
+margin-right: 1%;
+margin-top: 1%; 
 float: left;
 }
 
@@ -65,21 +66,21 @@ left: 320px;
 
 #courseTable {
 
-border: 1px solid #1E90FF;;
+border: 2px solid #8FAADC;
 border-collapse: collapse;
 font-family: Sans-serif;
 }
 
 .courseTableRow {
 
-border-bottom: 1px solid #1E90FF;
-border-top: 1px solid #1E90FF;
+border-bottom: 1px solid #8FAADC;
+border-top: 1px solid #8FAADC;
 border-collapse: collapse;
 }
 
 .courseCodeColumn1 {
 
-width: 165px;
+width: 12%;
 text-align: center;
 }
 
@@ -87,4 +88,49 @@ text-align: center;
 }
 
 #courseTableContainer {
+}
+
+#profilepng {
+	text-align: center;
+	position:absolute; RIGHT:500px; TOP:15px; WIDTH:40px; HEIGHT:40px
+}
+
+#coursespng {
+	text-align: center;
+	position:absolute; RIGHT:400px; TOP:15px; WIDTH:40px; HEIGHT:40px
+}
+
+#plannerpng {
+	text-align: center;
+	position:absolute; RIGHT:300px; TOP:15px; WIDTH:40px; HEIGHT:40px
+}
+
+#schedulepng {
+	text-align: center;
+	position:absolute; RIGHT:200px; TOP:15px; WIDTH:40px; HEIGHT:40px
+}
+
+#degreepng {
+	text-align: center;
+	position:absolute; RIGHT:100px; TOP:15px; WIDTH:40px; HEIGHT:40px
+}
+
+#studentName {
+	text-align: center;
+	font-size: 26px;
+}
+
+#studentProgram {
+	font-weight: 600;
+	margin-left: 5%;
+}
+
+#studentYear {
+	font-weight: 600;
+	margin-left: 5%;
+
+}
+
+body {
+  font-family: Sans-serif;
 }

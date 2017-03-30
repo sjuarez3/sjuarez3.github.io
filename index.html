@@ -6,19 +6,40 @@
 	<link rel="stylesheet" type="text/css" href="src/CSS/userinterface.css">
 </head>
 	<body>
-		<header>
+		<header style="margin-bottom: 4%">
 			<img src = "westernlogo.png" alt = "Western Logo" width= "200" height= "51.2">
 
-			<IMG STYLE="position:absolute; RIGHT:500px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="profile.png">
-			<IMG STYLE="position:absolute; RIGHT:400px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="courses.png">
-			<IMG STYLE="position:absolute; RIGHT:300px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="planner.png">
-			<IMG STYLE="position:absolute; RIGHT:200px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="schedule.png">
-			<IMG STYLE="position:absolute; RIGHT:100px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="degree.png">
+			<div id="profilepng">
+				<img style="WIDTH:40px; HEIGHT:40px" src="profile.png">
+				<p>Profile</p>
+			</div>
+			<div id="coursespng">
+				<img style="WIDTH:40px; HEIGHT:40px" src="courses.png">
+				<p>Courses</p>
+			</div>
+			<div id="plannerpng">
+				<img style="WIDTH:40px; HEIGHT:40px" src="planner.png">
+				<p>Planner</p>
+			</div>
+			<div id="schedulepng">
+				<img style="WIDTH:40px; HEIGHT:40px" src="schedule.png">
+				<p>Schedule</p>
+			</div>
+			<div id="degreepng">
+				<img style="WIDTH:40px; HEIGHT:40px" src="degree.png">
+				<p>Degree Progression</p>
+			</div>
 
-			<hr style="background:#8FAADC; border:0; height:7px" />
 		</header>
+		<hr style="background:#8FAADC; border:0; height:7px" />
+
 		
 		<div id="profile">
+			<p id="studentName"></p>
+			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
+			<p id="studentProgram"></p>
+			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
+			<p id="studentYear"></p>
 		</div>
 
 		<!--<div id="linedown1"></div>-->
@@ -31,7 +52,7 @@
 				<option selected disabled hidden>Subject</option>
 				<option>All</option>
 			</select>
-			<br>
+			<br></br>
 			<table id="courseTable">
 				<tbody id="courseTableBody">
 				</tbody>
