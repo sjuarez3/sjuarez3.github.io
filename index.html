@@ -7,7 +7,7 @@
 
 		<select id="subjectSelect" onchange="listCourses()">
 			<option selected disabled hidden>Subject</option>
-			<option>All</option>
+			<option class ="courseCode">All</option>
 		</select>
 		
 		<ul id="courselist">
@@ -71,6 +71,6 @@
 			};
 			firebase.initializeApp(config);
 		</script>
-		<script type = "text/javascript" src = "JS/courses.js"></script>
+		<script type = "text/javascript" src = "JS/firebaseFunctions.js"></script>
 	</body>
 </html>
