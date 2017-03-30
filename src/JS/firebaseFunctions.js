@@ -13,6 +13,12 @@ var courses = database.ref('courses');
 // declare courses array
 var courseList = [];
 
+// students reference
+var students = database.ref('students');
+
+// students courses array
+var studentList = [];
+
 // subjects dropdown menu
 subjects.on('value', function(snapshot) {
 	var i = 0;
@@ -49,6 +55,25 @@ courses.on('value', function(snapshot) {
 		td.innerHTML = "<br><b>" + courseList[i].title + "</b><br></br><i>" + courseList[i].description + "<br><p>Anti-Requisite(s): " + courseList[i].antiRequisites + "<br>Pre-Requisites(s): " + courseList[i].preRequisites + "<br>Units: " + courseList[i].units + "</p><br></i>"   
 		tr.appendChild(td);
 		i++;
+	});
+});
+
+// profile section
+students.on('value', function(snapshot) {
+	var studentName = document.getElementById('studentName');
+	var studentProgram = document.getElementById('studentProgram');
+	var studentYear = document.getElementById('studentYear');
+
+	snapshot.forEach(function(snap) {
+
+		var firstName = snap.val().firstName;
+		var lastName = snap.val().lastName;
+		var program = snap.val().program;
+		var year = snap.val().year;
+		
+		studentName.innerHTML = "<b>" + firstName + " " + lastName + "</b>";
+		studentProgram.innerHTML = "Program: " + program;
+		studentYear.innerHTML = "Year: " + year;
 	});
 });
 
