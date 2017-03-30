@@ -25,18 +25,20 @@
 		
 
 		<!--<hr style="background:#8FAADC; border:0; height:7px; top: 990px; position: relative;"/>-->
-		
-		<div id="courseTableContainer">
-			<select id="subjectSelect" onchange="filterCourseTable()">
+		<div style='overflow:hidden;width:600px;height:400px;'>
+            <select id="subjectSelect" onchange="filterCourseTable()">
 				<option selected disabled hidden>Subject</option>
 				<option>All</option>
 			</select>
+		<div id="courseTableContainer" style='overflow:auto; width:615px;height:400px;'>
+
 			<br>
 			<table id="courseTable">
 				<tbody id="courseTableBody">
 				</tbody>
 			<table>
 		</div>	
+		</div>
 
 		<!----------------- firebase stuff ---------------------------------------->
 		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
