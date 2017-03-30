@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+	<style>
+	/* TEST */ 
+
+	#r1{
+	    width:250px;
+	    height:400px;
+	    border-style:solid;
+	    border-color:#8FAADC;
+	    border-width:2px;
+	    background:none;
+
+	    top: 100px;
+	    left: 25px;
+
+	    position: absolute; 
+	}
+
+
+	#rkeydate{
+		width:250px;
+	    height:200px;
+	    border-style:solid;
+	    border-color:#8FAADC;
+	    border-width:2px;
+	    background:none;
+
+	    top: 100px;
+	    left: 1000px;
+
+	    position: absolute; 
+
+	}
+
+	#linedown1{
+
+		width: 1px;
+		height: 1000px;
+		border-style: solid;
+		border-color:#8FAADC;
+	    border-width:1px;
+	    background:#8FAADC;
+
+	    top: 75px;
+	    left: 300px;
+
+	    position: absolute;
+
+	}
+
+	#linedown2{
+
+		width: 1px;
+		height: 1000px;
+		border-style: solid;
+		border-color:#8FAADC;
+	    border-width:1px;
+	    background:#8FAADC;
+
+	    top: 75px;
+	    left: 975px;
+
+	    position: absolute;
+
+	}
+
+	#subjectSelect{
+
+		position: absolute;
+		top: 150px;
+		left: 320px;
+	}
+
+	</style>
+
+		<img src = "westernlogo.png" alt = "Wester Logo" width= "200" height= "51.2">
+
+		<IMG STYLE="position:absolute; RIGHT:500px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="profile.png">
+		<IMG STYLE="position:absolute; RIGHT:400px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="courses.png">
+		<IMG STYLE="position:absolute; RIGHT:300px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="planner.png">
+		<IMG STYLE="position:absolute; RIGHT:200px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="schedule.png">
+		<IMG STYLE="position:absolute; RIGHT:100px; TOP:15px; WIDTH:40px; HEIGHT:40px" SRC="degree.png">
+
+
+	<hr style="background:#8FAADC; border:0; height:7px" />
+	<div id="r1"></div>
+
+	<div id="linedown1"></div>
+	<div id="linedown2"></div>
+	<div id="rkeydate"></div>
+
+	<hr style="background:#8FAADC; border:0; height:7px; top: 990px; position: relative;"/>
+
+		<body>
+
+		<select id="subjectSelect" onchange="listCourses()">
+			<option selected disabled hidden>Subject</option>
+			<option>All</option>
+		</select>
+		
+		<ul id="courselist">
+		</ul>
+
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyAZ-aNUIlX__fhXIflOXQkZ8RBzuo5PMxQ",
+			authDomain: "program-planning-tool.firebaseapp.com",
+			databaseURL: "https://program-planning-tool.firebaseio.com",
+			storageBucket: "program-planning-tool.appspot.com",
+			messagingSenderId: "750984983725"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script type = "text/javascript" src = "JS/courses.js"></script>
+	</body>
+
+
+</html>
