@@ -1,0 +1,90 @@
+#profile{
+width:15%;
+height:400px;
+border-style:solid;
+border-color:#8FAADC;
+border-width:2px;
+background:none;
+
+float: left;
+}
+
+
+#rkeydate{
+width:250px;
+height:200px;
+border-style:solid;
+border-color:#8FAADC;
+border-width:2px;
+background:none;
+
+top: 100px;
+left: 1000px;
+
+position: absolute; 
+
+}
+
+#linedown1{
+
+width: 1px;
+height: 1000px;
+border-style: solid;
+border-color:#8FAADC;
+border-width:1px;
+background:#8FAADC;
+
+top: 75px;
+left: 300px;
+
+position: absolute;
+
+}
+
+#linedown2{
+
+width: 1px;
+height: 1000px;
+border-style: solid;
+border-color:#8FAADC;
+border-width:1px;
+background:#8FAADC;
+
+top: 75px;
+left: 975px;
+
+position: absolute;
+
+}
+
+#subjectSelect{
+
+top: 150px;
+left: 320px;
+}
+
+#courseTable {
+
+border: 1px solid #1E90FF;;
+border-collapse: collapse;
+font-family: Sans-serif;
+}
+
+.courseTableRow {
+
+border-bottom: 1px solid #1E90FF;
+border-top: 1px solid #1E90FF;
+border-collapse: collapse;
+}
+
+.courseCodeColumn1 {
+
+width: 165px;
+text-align: center;
+}
+
+.courseCodeColumn2 {
+}
+
+#courseTableContainer {
+}
