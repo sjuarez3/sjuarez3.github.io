@@ -10,6 +10,17 @@
       "preRequisites": [],
       "units": 0.5
     },
+	"CALC1000":{
+		"title": "Calculus I",
+		"subject": "Calculus",
+		"courseCode": "CALC1000",
+		"description": "Review of limits and derivatives of exponential, logarithmic and rational functions. Trigonometric functions and their inverses. The derivatives of the trig functions and their inverses. L'Hospital's rules. The definite integral. Fundamental theorem of Calculus. Simple substitution. Applications including areas of regions and volumes of solids of revolution.",
+		"breadthType": "C",
+		"termCode": "A/B",
+		"antiRequisites": [],
+		"preRequisites": [],
+		"units": 0.5
+	},
     "CS1026":{
       "title": "Computer Science Fundamentals I",
       "subject": "Computer Science",
@@ -239,17 +250,6 @@
       "termCode": "A/B",
       "antiRequisites": [],
       "preRequisites": ["CS3340"],
-      "units": 0.5
-    },
-    "CS3357":{
-      "title": "Computer Networks II",
-      "subject": "Computer Science",
-      "courseCode": "CS3357",
-      "description": "Network layering, performance, management, modelling and simulation; faults and failures. ",
-      "breadthType": "C",
-      "termCode": "A/B",
-      "antiRequisites": [],
-      "preRequisites": ["CS3305", "CS3357"],
       "units": 0.5
     },
     "CS4474":{

@@ -16,8 +16,45 @@ var courseList = [];
 // students reference
 var students = database.ref('students');
 
+// student1 reference John Smith
+var student1 = database.ref('students/0');
+
+// student2 reference Jane Doe
+var student2 = database.ref('students/1');
+
 // students courses array
 var studentList = [];
+
+// programs reference
+var programs = database.ref('programs');
+
+// programs reference honors CS 
+var cshonors = database.ref('programs/0');
+
+// programs reference majors CS
+var csmajor = database.ref('programs/1');
+
+// programs courses array
+var programsList = [];
+
+// completedCourses courses array
+var completedCoursesList = [];
+
+student1.on('value', function(snapshot) {
+	student1CompletedCoursesList = snapshot.val().completedCourses;
+});
+
+student2.on('value', function(snapshot) {
+	student2CompletedCoursesList = snapshot.val().completedCourses;
+});
+
+csmajor.on('value', function(snapshot) {
+	csmajorRequirements = snapshot.val().mandatoryRequirements;
+});
+
+cshonors.on('value', function(snapshot) {
+	cshonorsrequirements = snapshot.val().mandatoryRequirements;
+});
 
 // subjects dropdown menu
 subjects.on('value', function(snapshot) {
@@ -59,7 +96,7 @@ courses.on('value', function(snapshot) {
 });
 
 // profile section
-students.on('value', function(snapshot) {
+students.once('value', function(snapshot) {
 	var studentName = document.getElementById('studentName');
 	var studentProgram = document.getElementById('studentProgram');
 	var studentYear = document.getElementById('studentYear');
@@ -111,10 +148,7 @@ function filterCourseTable() {
 			
 			if(innerHtml == "All")
 			{
-				if(courseTableRow[i].style.display == "none")
-				{
-					courseTableRow[i].style.display = "unset"
-				}
+				courseTableRow[i].style.display = "";
 			}
 			else if(!innerHtml.includes(courseCode))
 			{
@@ -122,24 +156,24 @@ function filterCourseTable() {
 			}
 			else
 			{
-				courseTableRow[i].style.display = "unset";
+				courseTableRow[i].style.display = "";
 			}
 			i++;
 		});
 	});
 }
 
-// filter list
+// filter list by search
 function filterCoursesBySearch() {
-  // Declare variables 
-  var i;
-  var courseCode;
-  var input = document.getElementById('searchCourses');
-  var filter = input.value.toUpperCase();
-  var courseTableRow = document.getElementsByClassName('courseTableRow');
-  var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	// Declare variables 
+	var i;
+	var courseCode;
+	var input = document.getElementById('searchCourses');
+	var filter = input.value.toUpperCase();
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
 
-  for (i = 0; i < courseTableRow.length; i++) {
+	for (i = 0; i < courseTableRow.length; i++) {
 	  courseCode = courseTableRow[i].getElementsByTagName("td")[0].innerHTML;
 	  if (courseCode.toUpperCase().indexOf(filter) > -1) {
 		courseTableRow[i].style.display = "";
@@ -148,5 +182,152 @@ function filterCoursesBySearch() {
 	  {
 		courseTableRow[i].style.display = "none";
 	  }
-    } 
-  }
+	}
+}
+
+// show all courses
+function showAllCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+
+	for (i = 0; i < courseTableRow.length; i++) {
+		courseTableRow[i].style.display = "";
+	}
+}
+	
+// filter list by lvl 1000 courses
+function filterByFirstYearCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+
+	for (i = 0; i < courseTableRow.length; i++) {
+	  courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+	  index = courseCode.search(/\d/);
+	  if (courseCode[index] == 1) {
+		courseTableRow[i].style.display = "";
+	  }
+	  else
+	  {
+		courseTableRow[i].style.display = "none";
+	  }
+	}
+}
+
+// filter list by lvl 2000 courses
+function filterBySecondYearCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+
+	for (i = 0; i < courseTableRow.length; i++) {
+	  courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+	  index = courseCode.search(/\d/);
+	  if (courseCode[index] == 2) {
+		courseTableRow[i].style.display = "";
+	  }
+	  else
+	  {
+		courseTableRow[i].style.display = "none";
+	  }
+	}
+}
+
+// filter list by lvl 3000 courses
+function filterByThirdYearCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+
+	for (i = 0; i < courseTableRow.length; i++) {
+	  courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+	  index = courseCode.search(/\d/);
+	  if (courseCode[index] == 3) {
+		courseTableRow[i].style.display = "";
+	  }
+	  else
+	  {
+		courseTableRow[i].style.display = "none";
+	  }
+	}
+}
+
+// filter list by lvl 4000 courses
+function filterByFourthYearCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+
+	for (i = 0; i < courseTableRow.length; i++) {
+	  courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+	  index = courseCode.search(/\d/);
+	  if (courseCode[index] == 4) {
+		courseTableRow[i].style.display = "";
+	  }
+	  else
+	  {
+		courseTableRow[i].style.display = "none";
+	  }
+	}
+}
+
+// filter list by completed courses
+function filterByCompleteCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+			
+	for (i = 0; i < courseTableRow.length; i++)
+	{
+		courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+		if (student2CompletedCoursesList.indexOf(courseCode) > 0)
+		{
+			courseTableRow[i].style.display = "";
+		}
+		else
+		{
+			courseTableRow[i].style.display = "none";
+		}
+	}
+}
+
+// filter list by mandatory courses
+function filterByMandatoryCourses() {
+	// Declare variables 
+	var i;
+	var courseCode;
+	var courseTableRow = document.getElementsByClassName('courseTableRow');
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var index = 0;
+			
+	for (i = 0; i < courseTableRow.length; i++)
+	{
+		courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
+		if (cshonorsrequirements.indexOf(courseCode) > 0)
+		{
+			courseTableRow[i].style.display = "";
+		}
+		else
+		{
+			courseTableRow[i].style.display = "none";
+		}
+	}
+}

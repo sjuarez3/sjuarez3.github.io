@@ -1,0 +1,48 @@
+[
+    {
+      "program": "Honors Specialization in Computer Science",
+      "mandatoryRequirements": [
+        "STATS2244",
+        "CS1026",
+        "CALC1000",
+        "CS1027",
+        "MATH1600",
+		"CS2208",
+        "CS2209",
+        "CS2210",
+        "CS2211",
+        "CS2212",
+		"CS3305",
+        "CS3307",
+        "CS3331",
+        "CS3340",
+        "CS3342",
+		"CS3350",
+		"CS2214",
+		"WRIT2101"
+      ]
+    },
+    {
+      "program": "Major in Computer Science",
+      "mandatoryRequirements": [
+        "STATS2244",
+        "CS1026",
+        "CALC1000",
+        "CS1027",
+        "MATH1600",
+		"CS2208",
+        "CS2209",
+        "CS2210",
+        "CS2211",
+        "CS2212",
+		"CS3305",
+        "CS3307",
+        "CS3331",
+        "CS3340",
+        "CS3342",
+		"CS3350",
+		"CS2214",
+		"WRIT2101"
+	  ]
+    }
+  ]

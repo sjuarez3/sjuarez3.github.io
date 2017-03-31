@@ -11,7 +11,9 @@
         "CALC1000",
         "PSYCH1000",
         "ANTHRO1020"
-      ]
+      ],
+	  "completedCourses": [
+	  ]
     },
     {
       "firstName": "Jane",
@@ -20,10 +22,27 @@
       "graduationStatus": true,
       "year": 3,
       "coursesEnrolled": [
-		"CS1026",
-        "CS1027",
-        "CALC1000",
-        "PSYCH1000",
-        "ANTHRO1020"]
+		"CS3305",
+        "CS3307",
+        "CS3331",
+        "CS3340",
+        "CS3342",
+		"CS3350"],
+	  "completedCourses": [
+		    "STATS2244",
+			"CS1026",
+			"CALC1000",
+			"CS1027",
+			"MATH1600",
+			"CS2208",
+			"CS2209",
+			"CS2210",
+			"CS2211",
+			"CS2212",
+			"ANTHRO1020",
+			"CLASSICS1000",
+			"PSYCH1000",
+			"GEO2030"
+	  ]
     }
   ]
