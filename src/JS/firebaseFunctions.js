@@ -56,22 +56,6 @@ cshonors.on('value', function(snapshot) {
 	cshonorsrequirements = snapshot.val().mandatoryRequirements;
 });
 
-// subjects dropdown menu
-subjects.on('value', function(snapshot) {
-	var i = 0;
-	snapshot.forEach(function(snap) {
-
-		var subject = snap.val().subject;
-		subjectList[i++] = subject; 
-		var sel = document.getElementById('subjectSelect');
-		var opt = document.createElement('option');
-		opt.innerHTML = subject;
-		opt.value = subject;
-		sel.appendChild(opt);
-	});
-	showCourseInformation();
-});
-
 // show complete text below completed courses
 function showCourseInformation() {
 	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
@@ -145,6 +129,23 @@ courses.on('value', function(snapshot) {
 	});
 });
 
+// subjects dropdown menu
+subjects.on('value', function(snapshot) {
+	var i = 0;
+	snapshot.forEach(function(snap) {
+
+		var subject = snap.val().subject;
+		subjectList[i++] = subject; 
+		var sel = document.getElementById('subjectSelect');
+		var opt = document.createElement('option');
+		opt.innerHTML = subject;
+		opt.value = subject;
+		sel.appendChild(opt);
+	});
+});
+
+
+
 // profile section
 students.once('value', function(snapshot) {
 	var studentName = document.getElementById('studentName');
@@ -162,6 +163,7 @@ students.once('value', function(snapshot) {
 		studentProgram.innerHTML = "Program: " + program;
 		studentYear.innerHTML = "Year: " + year;
 	});
+	showCourseInformation();
 });
 
 
