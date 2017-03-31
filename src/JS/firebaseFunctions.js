@@ -109,7 +109,6 @@ function filterCourseTable() {
 				innerHtml = "All";
 			}
 			
-			console.log(courseCode);
 			if(innerHtml == "All")
 			{
 				if(courseTableRow[i].style.display == "none")
@@ -129,3 +128,25 @@ function filterCourseTable() {
 		});
 	});
 }
+
+// filter list
+function filterCoursesBySearch() {
+  // Declare variables 
+  var i;
+  var courseCode;
+  var input = document.getElementById('searchCourses');
+  var filter = input.value.toUpperCase();
+  var courseTableRow = document.getElementsByClassName('courseTableRow');
+  var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+
+  for (i = 0; i < courseTableRow.length; i++) {
+	  courseCode = courseTableRow[i].getElementsByTagName("td")[0].innerHTML;
+	  if (courseCode.toUpperCase().indexOf(filter) > -1) {
+		courseTableRow[i].style.display = "";
+	  }
+	  else
+	  {
+		courseTableRow[i].style.display = "none";
+	  }
+    } 
+  }

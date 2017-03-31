@@ -31,31 +31,49 @@
 			</div>
 
 		</header>
+		
 		<hr style="background:#8FAADC; border:0; height:7px" />
 
-		
 		<div id="profile">
+		
 			<p id="studentName"></p>
 			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
 			<p id="studentProgram"></p>
 			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
 			<p id="studentYear"></p>
+			
 		</div>
 		
+		<div id="coursePageContainer">
+			
 			<select id="subjectSelect" onchange="filterCourseTable()">
 				<option selected disabled hidden>Subject</option>
 				<option>All</option>
 			</select>
-			<input type="text" name="search" placeholder="Search..">
+			
+			<input type="text" id="searchCourses" onkeyup="filterCoursesBySearch()" placeholder="Search by course code..">			
+			
+			<br><br><br>
+			
+			<div id="filters">
+				<div><a class="filterLinks" onclick="filterComplete()" href="#"><h3>All</h3></a></div>
+				<div><a class="filterLinks" onclick="filterComplete()" href="#"><h3>Completed</h3></a></div>
+				<div><a class="filterLinks" onclick="filterMandatory()" href="#"><h3>Mandatory</h3></a></div>
+				<div><a class="filterLinks" onclick="filter1000lvl()" href="#"><h3>1000 Level</h3></a></div>
+				<div><a class="filterLinks" onclick="filter2000lvl()" href="#"><h3>2000 Level</h3></a></div>
+				<div><a class="filterLinks" onclick="filter3000lvl()" href="#"><h3>3000 Level</h3></a></div>
+				<div><a class="filterLinks" onclick="filter4000lvl()" href="#"><h3>4000 Level</h3></a></div>
+			</div>
 			
 			<div id="courseTableContainer">
-				<br>
-				<br></br>
 				<table id="courseTable">
 					<tbody id="courseTableBody">
 					</tbody>
 				<table>
-		
+			</div>
+			
+		</div>
+
 
 		<!----------------- firebase stuff ---------------------------------------->
 		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
