@@ -69,6 +69,7 @@ subjects.on('value', function(snapshot) {
 		opt.value = subject;
 		sel.appendChild(opt);
 	});
+	showCourseInformation();
 });
 
 // show complete text below completed courses
@@ -161,7 +162,6 @@ students.once('value', function(snapshot) {
 		studentProgram.innerHTML = "Program: " + program;
 		studentYear.innerHTML = "Year: " + year;
 	});
-	showCourseInformation();
 });
 
 
