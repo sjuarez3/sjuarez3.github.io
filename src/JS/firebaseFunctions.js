@@ -71,6 +71,42 @@ subjects.on('value', function(snapshot) {
 	});
 });
 
+// show complete text below completed courses
+function showCourseInformation() {
+	var courseCodeColumn1 = document.getElementsByClassName('courseCodeColumn1');
+	var i = 0;
+	
+	for (i = 0; i < courseCodeColumn1.length; i++)
+	{
+		courseCode = courseCodeColumn1[i].getElementsByTagName("h3")[0].innerHTML;
+		if (cshonorsrequirements.indexOf(courseCode) > -1)
+		{
+			var mandatory = document.createElement('p');
+			mandatory.innerHTML = "Type: <b>Mandatory</b>";
+			courseCodeColumn1[i].appendChild(mandatory);
+		}
+		else
+		{
+			var optional = document.createElement('p');
+			optional.innerHTML = "Type: <b>Optional</b>";
+			courseCodeColumn1[i].appendChild(optional);
+		}
+		if (student2CompletedCoursesList.indexOf(courseCode) > -1)
+		{
+			var newcontent = document.createElement('p');
+			newcontent.innerHTML = "&#9989; Completed";
+			courseCodeColumn1[i].appendChild(newcontent);
+		}
+		else
+		{
+			var addButton = document.createElement('button');
+			addButton.innerHTML = "Add to Planner";
+			addButton.className = "addButton";
+			courseCodeColumn1[i].appendChild(addButton);
+		}
+	}
+}
+
 // courses table
 courses.on('value', function(snapshot) {
 	var i = 0;
@@ -89,7 +125,20 @@ courses.on('value', function(snapshot) {
 		td.appendChild(h3);
 		var td = document.createElement("td");
 		td.className = "courseCodeColumn2";
-		td.innerHTML = "<br><b>" + courseList[i].title + "</b><br></br><i>" + courseList[i].description + "<br><p>Anti-Requisite(s): " + courseList[i].antiRequisites + "<br>Pre-Requisites(s): " + courseList[i].preRequisites + "<br>Units: " + courseList[i].units + "</p><br></i>"   
+		
+		var antiRequisites = "";
+		var preRequisites =  "";
+		
+		if(typeof courseList[i].antiRequisites != 'undefined')
+		{
+			antiRequisites = courseList[i].antiRequisites;
+		}
+		if(typeof courseList[i].preRequisites != 'undefined')
+		{
+			preRequisites = courseList[i].preRequisites;
+		}
+		
+		td.innerHTML = "<br><b>" + courseList[i].title + "</b><br></br><i>" + courseList[i].description + "<br><p>Anti-Requisite(s): " + antiRequisites + "<br>Pre-Requisites(s): " + preRequisites + "<br>Units: " + courseList[i].units + "</p><br></i>"   
 		tr.appendChild(td);
 		i++;
 	});
@@ -112,6 +161,7 @@ students.once('value', function(snapshot) {
 		studentProgram.innerHTML = "Program: " + program;
 		studentYear.innerHTML = "Year: " + year;
 	});
+	showCourseInformation();
 });
 
 
@@ -298,7 +348,7 @@ function filterByCompleteCourses() {
 	for (i = 0; i < courseTableRow.length; i++)
 	{
 		courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
-		if (student2CompletedCoursesList.indexOf(courseCode) > 0)
+		if (student2CompletedCoursesList.indexOf(courseCode) > -1)
 		{
 			courseTableRow[i].style.display = "";
 		}
@@ -321,7 +371,7 @@ function filterByMandatoryCourses() {
 	for (i = 0; i < courseTableRow.length; i++)
 	{
 		courseCode = courseTableRow[i].getElementsByTagName("h3")[0].innerHTML;
-		if (cshonorsrequirements.indexOf(courseCode) > 0)
+		if (cshonorsrequirements.indexOf(courseCode) > -1)
 		{
 			courseTableRow[i].style.display = "";
 		}

@@ -70,6 +70,10 @@
     text-decoration: underline;
 }
 
+.filterLinks:active {
+    text-decoration: underline;
+}
+
 
 #courseTableContainer {
 	overflow: auto;
@@ -113,6 +117,24 @@
 
 #searchCourses {
 	width: 20%;
+}
+
+.addButton {
+	background-color: #008CBA;
+	color: white;
+	border: none;
+	font-size: 14px;
+	padding: 10px 20px;
+    text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.addButton:hover {
+    background-color: white; /* Green */
+    color: black;
+	border: 1px solid #008CBA;
 }
 
 body {
