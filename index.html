@@ -42,18 +42,20 @@
 			<p id="studentYear"></p>
 		</div>
 		
-		<div id="courseTableContainer">
 			<select id="subjectSelect" onchange="filterCourseTable()">
 				<option selected disabled hidden>Subject</option>
 				<option>All</option>
 			</select>
 			<input type="text" name="search" placeholder="Search..">
-			<br></br>
-			<table id="courseTable">
-				<tbody id="courseTableBody">
-				</tbody>
-			<table>
-		</div>	
+			
+			<div id="courseTableContainer">
+				<br>
+				<br></br>
+				<table id="courseTable">
+					<tbody id="courseTableBody">
+					</tbody>
+				<table>
+		
 
 		<!----------------- firebase stuff ---------------------------------------->
 		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>

@@ -65,29 +65,29 @@ left: 320px;
 }
 
 #courseTable {
-
 border: 2px solid #8FAADC;
-border-collapse: collapse;
 font-family: Sans-serif;
+border-collapse: collapse;
 }
 
 .courseTableRow {
-
-border-bottom: 1px solid #8FAADC;
-border-top: 1px solid #8FAADC;
-border-collapse: collapse;
+border-bottom: 2px solid #8FAADC;
 }
 
 .courseCodeColumn1 {
-
-width: 12%;
 text-align: center;
+width: 15%;
 }
 
 .courseCodeColumn2 {
+	text-align: left;
 }
 
 #courseTableContainer {
+	overflow: auto;
+	max-height: 100vh;
+	position:relative;
+
 }
 
 #profilepng {
@@ -133,4 +133,5 @@ text-align: center;
 
 body {
   font-family: Sans-serif;
+  overflow: hidden;
 }
