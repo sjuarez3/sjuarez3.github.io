@@ -7,9 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="src/CSS/userinterface.css">
 </head>
 	<body>
-		<header style="margin-bottom: 1%">
+		<header style="margin-bottom: 1px">
+		<div id="westernlogopng">
 			<img src = "resources/images/western_logo.png" alt = "Western Logo" width= "200" height= "51.2">
-
+		</div>
 			<div id="profilepng">
 				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/users.png">
 				<figcaption>Profile</figcaption>
@@ -46,15 +47,17 @@
 		
 		<div id="coursePageContainer">
 			
-			<select id="subjectSelect" onchange="filterCourseTable()">
-				<option selected disabled hidden>Subject</option>
-				<option>All</option>
-			</select>
-			
+			<div id="searchContainer">
+				<select id="subjectSelect" onchange="filterCourseTable()">
+					<option selected disabled hidden>Subject</option>
+					<option>All</option>
+				</select>
+				
 			<input type="text" id="searchCourses" onkeyup="filterCoursesBySearch()" placeholder="Search by course code..">			
 			
 			<br><br><br>
-			
+						<div>
+
 			<div id="filters">
 				<div style="color: #8FAADC;"><h3>Filters:</h3></div>
 				<div><a class="filterLinks" onclick="showAllCourses()" href="#"><h3>All</h3></a></div>
