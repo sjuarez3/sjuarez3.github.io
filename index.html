@@ -11,50 +11,48 @@
 		<div id="westernlogopng">
 			<img src = "resources/images/western_logo.png" alt = "Western Logo" width= "200" height= "51.2">
 		</div>
-			<div id="profilepng">
-				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/users.png">
-				<figcaption>Profile</figcaption>
-			</div>
-			<div id="coursespng">
-				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/agenda.png">
-					<figcaption>
-					   <a href="javascript:showhide('course')">course</a> 
-					</figcaption>
-			</div>
-			<div id="plannerpng">
-				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/next.png">
-				<figcaption>
-                  <a href="javascript:showhide('planner')">planner</a>
-                </figcaption>
-            </div>
-			<div id="schedulepng">
-				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/calendar.png">
-				<figcaption>Schedule</figcaption>
-			</div>
-			<div id="degreepng">
-				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/long-checklist.png">
-				<figcaption>Degree Progression</figcaption>
-			</div>
+		<div id="profilepng">
+			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/users.png">
+			<figcaption>Profile</figcaption>
+		</div>
+		<div id="coursespng">
+			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/agenda.png">
+			<figcaption>
+			   <a class="active" href="javascript:showhide('course')">Courses</a> 
+			</figcaption>
+		</div>
+		<div id="plannerpng">
+			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/next.png">
+			<figcaption>
+			  <a href="javascript:showhide('planner')">Planner</a>
+			</figcaption>
+		</div>
+		<div id="schedulepng">
+			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/calendar.png">
+			<figcaption>Schedule</figcaption>
+		</div>
+		<div id="degreepng">
+			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/long-checklist.png">
+			<figcaption>Degree Progression</figcaption>
+		</div>
 		</header>
 		
 		<hr style="background:#8FAADC; border:0; height:7px" />
 
-
-		
-		<div id="coursePageContainer" style="height:100%">
-<!--		profile-->
-				<div id="profile">
-		
-			<p id="studentName"></p>
-			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
-			<p id="studentProgram"></p>
-			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
-			<p id="studentYear"></p>
+			<!--profile-->
+			<div id="profile">
+				<p id="studentName"></p>
+				<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
+				<p id="studentProgram"></p>
+				<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
+				<p id="studentYear"></p>
+			</div>
 			
-		</div>
-<!--		main div-->
+			<!--main div-->
 			<div id="maindiv">
-<!--			course container-->
+					<div id="coursePageContainer">
+
+			<!--course container-->
 			<div id="course">
 				<select id="subjectSelect" onchange="filterCourseTable()">
 					<option selected disabled hidden>Subject</option>
@@ -64,11 +62,11 @@
 			<input type="text" id="searchCourses" onkeyup="filterCoursesBySearch()" placeholder="Search by course code..">			
 			
 			<br><br><br>
-						<div>
+			<div>
 
 			<div id="filters">
 				<div style="color: #8FAADC;"><h3>Filters:</h3></div>
-				<div><a class="filterLinks" onclick="showAllCourses()" href="#"><h3>All</h3></a></div>
+				<div><a class="filterLinks active" onclick="showAllCourses()" href="#"><h3>All</h3></a></div>
 				<div><a class="filterLinks" onclick="filterByCompleteCourses()" href="#"><h3>Completed</h3></a></div>
 				<div><a class="filterLinks" onclick="filterByMandatoryCourses()" href="#"><h3>Mandatory</h3></a></div>
 				<div><a class="filterLinks" onclick="filterByFirstYearCourses()" href="#"><h3>1000 Level</h3></a></div>
@@ -90,7 +88,8 @@
             
              <p>planner</p>
          </div>
-     </div>
+		 
+		</div>
      </div>
 
 
