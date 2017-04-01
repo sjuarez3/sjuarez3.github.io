@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%">
 <head>
   <title>UWO Student Center</title>
 	<script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="src/CSS/userinterface.css">
 </head>
-	<body>
+	<body style="height:100%">
 		<header style="margin-bottom: 1px">
 		<div id="westernlogopng">
 			<img src = "resources/images/western_logo.png" alt = "Western Logo" width= "200" height= "51.2">
@@ -17,12 +17,16 @@
 			</div>
 			<div id="coursespng">
 				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/agenda.png">
-					<figcaption>Courses</figcaption>
+					<figcaption>
+					   <a href="javascript:showhide('course')">course</a> 
+					</figcaption>
 			</div>
 			<div id="plannerpng">
 				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/next.png">
-				<figcaption>Planner</figcaption>
-			</div>
+				<figcaption>
+                  <a href="javascript:showhide('planner')">planner</a>
+                </figcaption>
+            </div>
 			<div id="schedulepng">
 				<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/calendar.png">
 				<figcaption>Schedule</figcaption>
@@ -35,7 +39,11 @@
 		
 		<hr style="background:#8FAADC; border:0; height:7px" />
 
-		<div id="profile">
+
+		
+		<div id="coursePageContainer" style="height:100%">
+<!--		profile-->
+				<div id="profile">
 		
 			<p id="studentName"></p>
 			<hr style="background:#8FAADC; border:0; height:2px; width: 90%;" />
@@ -44,10 +52,10 @@
 			<p id="studentYear"></p>
 			
 		</div>
-		
-		<div id="coursePageContainer">
-			
-			<div id="searchContainer">
+<!--		main div-->
+			<div id="maindiv">
+<!--			course container-->
+			<div id="course">
 				<select id="subjectSelect" onchange="filterCourseTable()">
 					<option selected disabled hidden>Subject</option>
 					<option>All</option>
@@ -77,6 +85,13 @@
 			</div>
 			
 		</div>
+<!--         planner div-->
+         <div id ="planner" style="subdiv">
+            
+             <p>planner</p>
+         </div>
+     </div>
+     </div>
 
 
 		<!----------------- firebase stuff ---------------------------------------->
@@ -95,5 +110,6 @@
 			firebase.initializeApp(config);
 		</script>
 		<script type = "text/javascript" src = "src/JS/firebaseFunctions.js"></script>
+        <script type="text/javascript" src = "src/JS/helper.js"></script>
 	</body>
 </html>

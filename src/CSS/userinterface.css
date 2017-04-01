@@ -40,8 +40,8 @@
 }
 
 #profile {
-	width: 200px;
-	height:400px;
+	width: 15%;
+	height: 60%;
 	border-style:solid;
 	border-color:#8FAADC;
 	border-width:2px;
@@ -51,15 +51,18 @@
 	float: left;
 }
 
-#searchContainer {
-	width: 1000px;
-	margin-left: 220px;
+
+
+#course {
+  position: absolute;
+  display: block;
 }
 
 #filters {
     border: 2px solid #8FAADC;
     padding: 1px;
 	width: 1000px;
+
 }
 
 #filters div {
@@ -148,6 +151,29 @@
     color: black;
 	border: 1px solid #008CBA;
 }
+
+#maindiv{
+    border-style: solid
+    border-color: #8FAADC;
+    position: relative;
+	margin-right:16%;
+	margin-left: 16%;
+    height: 90%;
+    width: 70%;
+               
+    }
+
+.subdiv{
+    border-style: solid;
+    border-color: #8FAADC;
+    position: absolute;
+	margin-right:16%;
+	margin-left: 16%;
+    height: 90%;
+    width: 70%;
+    display: none;
+               
+    }
 
 body {
   font-family: Sans-serif;
