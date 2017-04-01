@@ -180,11 +180,8 @@ figcaption > a.hover {
 .subdiv {
     border-style: solid;
     border-color: #8FAADC;
-    position: absolute;
-	margin-right:16%;
-	margin-left: 16%;
-    height: 90%;
-    width: 70%;
+    position: inherit;
+	margin-left: 265px;
     display: none;
 }
 

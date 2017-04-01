@@ -13,7 +13,9 @@
 		</div>
 		<div id="profilepng">
 			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/users.png">
-			<figcaption>Profile</figcaption>
+			<figcaption>
+			  <a class="active" href="javascript:showhide('course')">Profile</a> 
+			</figcaption>
 		</div>
 		<div id="coursespng">
 			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/agenda.png">
@@ -29,11 +31,15 @@
 		</div>
 		<div id="schedulepng">
 			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/calendar.png">
-			<figcaption>Schedule</figcaption>
+			<figcaption>
+			  <a href="javascript:showhide('schedule')">Schedule</a>
+			</figcaption>
 		</div>
 		<div id="degreepng">
 			<img style="WIDTH:40px; HEIGHT:40px" src="resources/images/long-checklist.png">
-			<figcaption>Degree Progression</figcaption>
+			<figcaption>
+			  <a href="javascript:showhide('degree')">Degree Progression</a>
+			</figcaption>
 		</div>
 		</header>
 		
@@ -50,7 +56,19 @@
 			
 			<!--main div-->
 			<div id="maindiv">
-					<div id="coursePageContainer">
+            <!--         planner div-->
+            <div id ="planner" class="subdiv">
+              <p>planner</p>
+            </div>
+             <!--            degree div-->
+            <div id="degree" class="subdiv">
+                <p>degree</p>
+            </div>
+             <!--            schedule div-->
+            <div id="schedule" class="subdiv">
+                <p>schedule</p>
+            </div>
+            <div id="coursePageContainer">
 
 			<!--course container-->
 			<div id="course">
@@ -83,13 +101,8 @@
 			</div>
 			
 		</div>
-<!--         planner div-->
-         <div id ="planner" style="subdiv">
-            
-             <p>planner</p>
-         </div>
-		 
-		</div>
+        </div>
+
      </div>
 
 
