@@ -40,9 +40,6 @@ var programsList = [];
 // completedCourses courses array
 var completedCoursesList = [];
 
-// for switching profiles
-var s=-1;
-
 student1.on('value', function(snapshot) {
 	student1CompletedCoursesList = snapshot.val().completedCourses;
 });
@@ -389,46 +386,6 @@ function filterByMandatoryCourses() {
 		}
 	}
 }
-
-
-
-
-function progression(){
-	var completecount = 0;
-	var required = ;
-	
-	
-}
-
-
-
-function userLogOut(){
-		s = Math.floor(Math.random() *(student.length + 1) );
-	
-	if(s == null){
-		
-		s = Math.floor(Math.random() *(student.length + 1) );
-
-	}
-	
-	else
-	{
-		 sfirstName =  student[s].firstName;
-		 sLastName = student[s].lastName;
-		 sprogram = student[s].program;
-		 syear = student[s].year;
-	}
-	
-	if(student[s].firstName == sfirstName && student[s].lastName == sLastName ){
-		
-		userLogOut();
-	}
-		 sfirstName =  student[s].firstName;
-		 sLastName = student[s].lastName;
-		 sprogram = student[s].program;
-		 syear = student[s].year;
-}
-
 
 var selector, elems, makeActive;
 
