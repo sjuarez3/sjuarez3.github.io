@@ -96,6 +96,7 @@ figcaption > a.hover {
 	margin-left: 25px;
 }
 
+
 #courseTable {
 	border: 2px solid #8FAADC;
 	border-collapse: collapse;
@@ -178,12 +179,45 @@ figcaption > a.hover {
 }
 
 .subdiv {
-    border-style: solid;
-    border-color: #8FAADC;
-    position: inherit;
-	margin-left: 265px;
+    position: absolute;
     display: none;
 }
+
+.plannertxt{
+    text-align: center;
+    font-size: 15px;
+    color: #8FAADC;
+    
+}
+
+#plannerContainer {
+    border: 2px solid #8FAADC;
+    height: 500px;
+	width: 200px;
+	margin-left: 25px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: inline-block;
+
+}
+
+.plannerContainerRow{
+
+    border-bottom: 2px solid #8FAADC;
+
+}
+
+.plannerColumn {
+	text-align: center;
+	width: 200px;
+}
+
+.plannerTable {
+/*	border: 2px solid #8FAADC;*/
+	border-collapse: collapse;
+}
+
 
 body {
 	font-family: Sans-serif;

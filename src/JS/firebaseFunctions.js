@@ -48,6 +48,9 @@ student2.on('value', function(snapshot) {
 	student2CompletedCoursesList = snapshot.val().completedCourses;
 });
 
+
+                             
+
 csmajor.on('value', function(snapshot) {
 	csmajorRequirements = snapshot.val().mandatoryRequirements;
 });
@@ -399,3 +402,19 @@ makeActive = function () {
 
 for (var i = 0; i < elems.length; i++)
     elems[i].addEventListener('mousedown', makeActive);
+
+function year1(){
+        var i =0;
+    	var tableBody = document.getElementById("courseTableBody");
+        courseList[i] = completedCoursesList[i];
+		var tr = document.createElement("tr");
+		tr.className = "plannerContainerRow";
+		tableBody.appendChild(tr);
+		var td = document.createElement("td");
+		td.className = "plannerColumn";
+		tr.appendChild(td);
+
+		td.innerHTML = courseList[i]
+		i++;
+    
+}
