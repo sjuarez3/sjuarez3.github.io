@@ -423,10 +423,10 @@ function userLogOut(){
 		
 		userLogOut();
 	}
-		 firstName =  student[s].firstName;
-		 LastName = student[s].lastName;
-		 program = student[s].program;
-		 year = student[s].year;
+		 sfirstName =  student[s].firstName;
+		 sLastName = student[s].lastName;
+		 sprogram = student[s].program;
+		 syear = student[s].year;
 }
 
 
