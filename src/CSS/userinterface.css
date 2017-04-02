@@ -33,6 +33,14 @@
 	color: #8FAADC;
 }
 
+
+#logoutpng {
+	text-align: center;
+	position:absolute; LEFT:1100px; TOP:1px;
+	margin-right: 1px;
+	color: #8FAADC;
+}
+
 figcaption > a {
 	text-decoration: underline;
 	color: #8FAADC;
