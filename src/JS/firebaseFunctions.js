@@ -391,6 +391,8 @@ function reloadFunction(){
 		 LastName = student[s].lastName;
 		 program = student[s].program;
 		 year = student[s].year;
+		 
+		 console.log(firstName);
 	
 }
 
