@@ -377,20 +377,20 @@ function reloadFunction(){
 	
 	else
 	{
-		 sfirstName =  student[s].firstName;
-		 sLastName = student[s].lastName;
-		 sprogram = student[s].program;
-		 syear = student[s].year;
+		 firstName =  student[s].firstName;
+		 LastName = student[s].lastName;
+		 program = student[s].program;
+		 year = student[s].year;
 	}
 	
 	if(student[s].firstName == sfirstName && student[s].lastName == sLastName ){
 		
 		userLogOut();
 	}
-		 sfirstName =  student[s].firstName;
-		 sLastName = student[s].lastName;
-		 sprogram = student[s].program;
-		 syear = student[s].year;
+		 firstName =  student[s].firstName;
+		 LastName = student[s].lastName;
+		 program = student[s].program;
+		 year = student[s].year;
 	
 }
 
