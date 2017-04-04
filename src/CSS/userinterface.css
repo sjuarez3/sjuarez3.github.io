@@ -230,3 +230,54 @@ figcaption > a.hover {
 body {
 	font-family: Sans-serif;
 }
+
+#keyDates {
+	width: 265px;
+	height: 250px;
+	border-style:solid;
+	border-color:#8FAADC;
+	border-width:2px;
+	background:none;
+	margin-left: 20px;
+	position:absolute; LEFT:1275px; TOP:87px;
+}
+
+#academicOffice {
+	width: 265px;
+	height: 485px;
+	border-style:solid;
+	border-color:#8FAADC;
+	border-width:2px;
+	background:none;
+	margin-left: 20px;
+	position:absolute; LEFT:1275px; TOP:352px;
+}
+
+#academicOffice > p {
+	text-align: left;
+	margin-left: 3px;
+}
+
+.academicButtons {
+	background-color: #008CBA;
+	color: white;
+	border: 1px solid #008CBA;
+	font-size: 14px;
+	padding: 10px 20px;
+    text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.academicButtons:hover {
+    background-color: white;
+    color: black;
+	border: 1px solid #008CBA;
+}
+
+.academicButtons > a {
+	text-decoration: none;
+}
