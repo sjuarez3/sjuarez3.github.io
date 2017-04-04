@@ -226,7 +226,11 @@ figcaption > a.hover {
 	border-collapse: collapse;
 }
 
-
+.container{
+    max-height: 100% auto;
+    max-width: 100% auto;
+    position: absolute;
+}
 body {
 	font-family: Sans-serif;
 }
