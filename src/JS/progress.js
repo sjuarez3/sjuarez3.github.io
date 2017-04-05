@@ -59,10 +59,6 @@ function countCompletedCourse(){
             p.appendChild(a);
             a.style.position="absolute";
             a.innerHTML="Now you have: "+ c*0.5 + "/" + i*0.5 + " credits"+" as " + u*100 +"%" + " in progress";
-//            progressBody.appendChild(div)
-//            progressBody.appendChild(p);
-//            p.innerHTML="The progress is:" + u;
-//            p.innerHTML="the progress is:" + 
             console.log(u);
             
         });
