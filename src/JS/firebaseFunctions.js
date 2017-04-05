@@ -40,6 +40,8 @@ var programsList = [];
 // completedCourses courses array
 var completedCoursesList = [];
 
+var cshonorsrequirements = [];
+
 var s = -1;
 
 student1.on('value', function(snapshot) {
@@ -450,3 +452,4 @@ function year1(){
 		i++;
     
 }
+
